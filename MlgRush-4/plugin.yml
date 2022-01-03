@@ -1,0 +1,16 @@
+name: MLGRush
+version: 1.0.0
+authors:
+- player4allben
+- Crasher508
+api: 4.0.0
+main: player4allben\MLGRush\MLGRush
+description: 'MLGRush'
+commands:
+    mlgrush:
+        description: 'MLGRush main command'
+    leave:
+        description: 'Leave command'
+    hub:
+        description: 'Hub command'
+        aliases: [lobby, l]
