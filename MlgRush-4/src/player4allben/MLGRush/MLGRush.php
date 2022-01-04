@@ -79,7 +79,7 @@ class MLGRush extends PluginBase implements Listener {
             $blocks = $arenafile->get('blocks');
             foreach ($blocks as $block) {
                 $b = explode(':', $block);
-                $this->getServer()->getWorldManager()->getWorldByName($gamename)->setBlock(new Vector3($b['0'], $b['1'], $b['2']), VanillaBlocks::AIR());
+                $this->getServer()->getWorldManager()->getWorldByName($gamename)->setBlock(new Vector3($b[0], $b[1], $b[2]), VanillaBlocks::AIR());
             }
             $arenafile->set('blocks', array());
             $arenafile->set('mode', 'waiting');
@@ -212,7 +212,7 @@ class MLGRush extends PluginBase implements Listener {
                     $blocks = $arenafile->get('blocks');
                     foreach ($blocks as $block) {
                         $b = explode(':', $block);
-                        $this->getServer()->getWorldManager()->getWorldByName($arenaname)->setBlock(new Vector3($b['0'], $b['1'], $b['2']), VanillaBlocks::AIR());
+                        $this->getServer()->getWorldManager()->getWorldByName($arenaname)->setBlock(new Vector3($b[0], $b[1], $b[2]), VanillaBlocks::AIR());
                     }
                     $arenafile->save();
 					$chunks = $this->getServer()->getWorldManager()->getDefaultWorld()->getLoadedChunks();
@@ -254,7 +254,7 @@ class MLGRush extends PluginBase implements Listener {
                     $blocks = $arenafile->get('blocks');
                     foreach ($blocks as $block) {
                         $b = explode(':', $block);
-                        $this->getServer()->getWorldManager()->getWorldByName($arenaname)->setBlock(new Vector3($b['0'], $b['1'], $b['2']), VanillaBlocks::AIR());
+                        $this->getServer()->getWorldManager()->getWorldByName($arenaname)->setBlock(new Vector3($b[0], $b[1], $b[2]), VanillaBlocks::AIR());
                     }
                     $arenafile->save();
                     $sender->transfer('127.0.0.1', 19133);
@@ -359,7 +359,7 @@ class MLGRush extends PluginBase implements Listener {
         if ($tile instanceof Sign) {
             $text = $tile->getText()->getLines();
             if ($text[0] == "§1M§fL§4G§fRush") {
-                $arenaname = TextFormat::clean($text['1']);
+                $arenaname = TextFormat::clean($text[1]);
                 $arenafile = new Config($this->getDataFolder() . '/games/' . $arenaname . '.yml', Config::YAML);
                 $playercount = $arenafile->get('playercount');
                 $mode = $arenafile->get('mode');
@@ -513,7 +513,7 @@ class MLGRush extends PluginBase implements Listener {
                         }
                         foreach ($blocks as $block) {
                             $b = explode(':', $block);
-                            $this->getServer()->getWorldManager()->getWorldByName($arenaname)->setBlock(new Vector3($b['0'], $b['1'], $b['2']), VanillaBlocks::AIR());
+                            $this->getServer()->getWorldManager()->getWorldByName($arenaname)->setBlock(new Vector3($b[0], $b[1], $b[2]), VanillaBlocks::AIR());
                         }
                         if ($mode == 'ingame1') {
 							if (($one = $this->getServer()->getPlayerByPrefix($arenafile->get('playerone'))) !== null) {
@@ -572,7 +572,7 @@ class MLGRush extends PluginBase implements Listener {
                         }
                         foreach ($blocks as $block) {
                             $b = explode(':', $block);
-                            $this->getServer()->getWorldManager()->getWorldByName($arenaname)->setBlock(new Vector3($b['0'], $b['1'], $b['2']), VanillaBlocks::AIR());
+                            $this->getServer()->getWorldManager()->getWorldByName($arenaname)->setBlock(new Vector3($b[0], $b[1], $b[2]), VanillaBlocks::AIR());
                         }
                         if ($mode == 'ingame1') {
 							if (($one = $this->getServer()->getPlayerByPrefix($arenafile->get('playerone'))) !== null) {
@@ -880,7 +880,7 @@ class MLGTask extends MLGRushTask {
                     $blocks = $arenafile->get('blocks');
                     foreach ($blocks as $block) {
                         $b = explode(':', $block);
-                        $this->getOwner()->getServer()->getWorldManager()->getWorldByName($gamename)->setBlock(new Vector3($b['0'], $b['1'], $b['2']), VanillaBlocks::AIR());
+                        $this->getOwner()->getServer()->getWorldManager()->getWorldByName($gamename)->setBlock(new Vector3($b[0], $b[1], $b[2]), VanillaBlocks::AIR());
                     }
 
                     $arenafile->set('mode', 'starting2');
@@ -1022,7 +1022,7 @@ class MLGTask extends MLGRushTask {
                     $blocks = $arenafile->get('blocks');
                     foreach ($blocks as $block) {
                         $b = explode(':', $block);
-                        $this->getOwner()->getServer()->getWorldManager()->getWorldByName($gamename)->setBlock(new Vector3($b['0'], $b['1'], $b['2']), VanillaBlocks::AIR());
+                        $this->getOwner()->getServer()->getWorldManager()->getWorldByName($gamename)->setBlock(new Vector3($b[0], $b[1], $b[2]), VanillaBlocks::AIR());
                     }
 
                     $arenafile->set('mode', 'starting3');
@@ -1153,7 +1153,7 @@ class MLGTask extends MLGRushTask {
                     $blocks = $arenafile->get('blocks');
                     foreach ($blocks as $block) {
                         $b = explode(':', $block);
-                        $this->getOwner()->getServer()->getWorldManager()->getWorldByName($gamename)->setBlock(new Vector3($b['0'], $b['1'], $b['2']), VanillaBlocks::AIR());
+                        $this->getOwner()->getServer()->getWorldManager()->getWorldByName($gamename)->setBlock(new Vector3($b[0], $b[1], $b[2]), VanillaBlocks::AIR());
                     }
 
 
