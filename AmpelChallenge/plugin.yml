@@ -1,0 +1,11 @@
+name: AmpelChallenge
+main: blackbarbar486\ampelchallenge\Main
+authors:
+- Blackbarbar
+- Crasher508
+version: 2.1
+api: 4.0.0
+
+permissions:
+ challenge.command:
+  default: op
